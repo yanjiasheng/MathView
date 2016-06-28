@@ -35,7 +35,7 @@ public class QuadraticView extends View {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         mWidth = getMeasuredWidth();
         mHeight = getMeasuredHeight();
-        Log.d(TAG, "mWidth:" + mWidth + ",mHeight:" + mHeight);
+        Log.d(TAG, "onMeasure mWidth:" + mWidth + ",mHeight:" + mHeight);
     }
 
     @Override
@@ -52,16 +52,12 @@ public class QuadraticView extends View {
             } else {
                 path.lineTo(x, (float) y);
             }
-            Log.d("YJS", "x:" + x);
-            Log.d("YJS", "y:" + y);
         }
         for (int p = mWidth / 2; p < mWidth; p += 1) {
             int x = p;
             double y = Math.pow(x - mWidth, 2) / 200;
             x = p - mWidth / 2;
             path.lineTo(x, (float) y);
-            Log.d("YJS", "x:" + x);
-            Log.d("YJS", "y:" + y);
         }
         // for (int p = 0; p < mWidth; p += 1) {
         // int x = p;
